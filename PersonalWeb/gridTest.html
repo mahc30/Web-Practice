@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title></title>
+	</head>
+	<style type="text/css">
+		body{
+			background: #FA6BC6;
+			text-align: center;	
+		}
+
+		.Container{
+			height: 500px;
+			background: #E508D8;
+			display: grid;
+			grid-gap: 5px;
+			grid-template-columns: 1fr 2fr;
+			grid-template-columns:repeat(3,2fr);
+			grid-auto-rows: 10%;
+			}
+
+		.box1 {
+			grid-column: 1 / 2;
+			grid-row: 1 / 4;
+		}
+
+		.box2{
+			grid-area: 2 / 2 / 6 / 3;
+		}
+
+		.box{
+			background: #9F079D;
+			text-align: center;
+			align-content: center;
+			/*padding: 2px;
+			margin: 2px;
+			height: 50px;*/
+		}
+
+	</style>
+	<body>
+		<div class="Container">
+			<div class="box box1">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+			<div class="box box2">4</div>
+			<div class="box">5</div>
+			<div class="box">6</div>
+			<div class="box">7</div>
+			<div class="box">8</div>
+			<div class="box">9</div>
+			<div class="box">10</div>
+			<div class="box">11</div>
+			<div class="box">12</div>
+			<div class="box">13</div>
+			<div class="box">14</div>
+			<div class="box">15</div>
+		</div>
+	</body>
+
+</html>
