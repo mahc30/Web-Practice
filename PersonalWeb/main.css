@@ -5,7 +5,7 @@ header {
     left: 0px;
     text-align: center;
     height: 10%;
-    background: red;
+    background: white;
 }
 
 .container {
@@ -33,7 +33,7 @@ header {
     position: relative;
     bottom: 100%;
     height: 100%;
-    background: purple;
+    background: darkgray;
     width: 70%;
 
 }
