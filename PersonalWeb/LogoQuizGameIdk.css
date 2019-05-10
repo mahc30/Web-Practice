@@ -31,7 +31,7 @@ header{
     width: 98%;
     height: 49%;
     text-align: center;
-    background: hotpink;
+    
 }
 
 .menu > a{
@@ -52,18 +52,20 @@ header{
     background: darkblue;
     height: 92%;
     width: 80%;
+    max-width: 80%;
+    max-height: 3fr;
     position: fixed;
     left: 20%;
     padding: 1% 0 0 2%;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill,11%);
+    grid-template-columns: repeat(3,3fr);
     grid-gap: 1%;
 }
 
 .logo{
     background: yellow;
-    height: 80%; 
+    max-height: 90%; 
 }
 
 .logo:hover{

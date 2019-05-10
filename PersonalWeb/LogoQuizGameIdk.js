@@ -53,35 +53,27 @@ function RandomNumberRange(min, max) {
 }
 
 function GetWinner() {
-    return RandomNumberRange(0, logos.length);
+    return RandomNumberRange(0, logo.length);
 }
 
-function SetWinner(position) {
-    var winnerLogos = logos;
-    winnerLogos[position] = logos[position];
-    logo[position].innerHTML = '<img src="logos/' + winnerLogos[position] + '">';
-    return winnerLogos;
+function SetWinner(position, winnerlogo) {
+    
+    logo[position].innerHTML = '<img src="logos/' + winnerlogo + '">';
 }
 
-function FillBoxes(logos, position) {
+function FillBoxes(winner) {
 
     var randomelement;
 
-    for (i = 0; i < logos.length; i++) {
-        randomelement = RandomNumberRange(0, logos.length);
-        if (randomelement != winner) {
-            console.log("position: " + position + "randomElement: " + randomelement);
+    for (i = 0; i < logo.length; i++) {
+        randomelement = RandomNumberRange(0, logo.length);
+        if(randomelement === winner){
+            randomelement += 1;
+        }
+            console.log("randomElement: " + randomelement);
             logo[i].innerHTML = '<img src="logos/' + logos[randomelement] + '">';    
-            console.log(randomelement)
-        }
-        else{
-            logo[i].innerHTML = '<img src="logos/' + logos[randomelement+1] + '">';
-        }
-
-        
     }
 
-    return position;
 }
 
 function Click() {
@@ -126,10 +118,11 @@ function Play() {
 
     openModal();
     winner = GetWinner();
+    var winnerlogo = logos[winner];
     modalbody[0].innerHTML = '<img src="logos/' + logos[winner] + '">';
-    FillBoxes(newlogos, winner);
-    newlogos = SetWinner(winner);
-    console.log(" The Winner position is: " + winner + " Image: " + newlogos[winner]);
+    FillBoxes(winner);
+    SetWinner(winner, winnerlogo);
+    console.log(" The Winner position is: " + winner + " Image: " + logos[winner]);
 
 }
 
