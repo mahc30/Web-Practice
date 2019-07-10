@@ -1,4 +1,6 @@
-const logo = document.getElementsByClassName('logo');
+$(document).ready(function () {
+
+    const logo = document.getElementsByClassName('logo');
 const modalbody = document.getElementsByClassName('modal-body');
 var modal = document.getElementById('myModal');
 var winner = 0;
@@ -26,8 +28,48 @@ logos.push("stackOverflow.png");
 logos.push("Starbucks.png");
 logos.push("Upb.png");
 logos.push("Volkswagen.png");
+var response;
+var companyName = 'amazon';
+
+    for(let i = 0; i < 26; i++){
+
+        companyName = String.fromCharCode(i);
+        const Http = new XMLHttpRequest();
+        const url='http://autocomplete.clearbit.com/v1/companies/suggest?query=' + companyName;
+        Http.open("GET", url);
+        Http.send();
+        Http.onreadystatechange=(e)=>{
+        response = Http.responseText;
+        
+        );
+        
+        console.log(response);
+        
+        response = JSON.parse(response);
+        
+        logos.push(response.name);
+        }
+        
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // When the user clicks on the button, open the modal
+
+
+
 function openModal() {
     modal.style.display = "block";
 }
@@ -127,3 +169,5 @@ function Play() {
 }
 
 Click();
+
+});
