@@ -1,74 +1,88 @@
 body{
     margin: 0;
     padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
 }
 
-#title{
-    position: relative;
-    text-align: center;
-    left: 30%;
-    width: 40%;    
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 2;;
-}
 .todo {
-    position: fixed;
+    display: grid;
+    grid-template-rows: 8% 92%;
+    grid-template-columns: 1fr 4fr;
+    overflow: hidden;
     background-image: url(../resources/background.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    height: 80%;
+    height: 100%;
 }
 
-.container{
-    background: transparent;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+#title{
+    text-align: center;
+    grid-area: 1 / 1 / 1 / 3;
+    background-image: linear-gradient(to left, purple,purple,violet, cyan, pink, cyan, red, cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-size: 80%;      
+  z-index:2;
+}
+
+#title > h1{
+    position: relative;
+    bottom: 25%;
 }
 
 .navigation {
     background: transparent;
     text-align: center;
+    grid-area: 2 / 1 / 3 / 2;
     display: grid;
+    grid-template-rows: repeat(5,1fr);
 }
 
 .innerContainer {
+    grid-area: 2 / 2 / 3 / 3;
     display: grid;  
-    grid-template-rows: 3fr 1fr;  
-    background: transparent;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;  
+    background:transparent;
 }
 
 .box{
     text-align: center;
+    background: transparent;
 }
 
 .imageBox {
+    top: 25%;
+    left: 25%;
+    grid-area: 1/1/3/2;
+}
+
+.imageBox > img{
+    max-width: 60%;
+    max-height: 60%;
+    border-radius: 10%;
     position: relative;
-    left: 60%;
-    overflow: hidden;
-    max-width: 400px;
-    max-height: 400px;
+    top:15%;
 }
 
 .descriptionBox{
-    position: relative;
-    right: 20%;
-    bottom: 160%;
-    background-image: url(../resources/static\ gi.gif);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    -webkit-background-clip: text;
-    color:transparent;
-    font-size: 8em;
+    grid-area: 1/2/2/2;
+    padding-top: 50%;
+    padding-right: 2%;
+    
+    font-size: 100%;
     font-style: italic;
 }
 
+.contactBox{
+    grid-area: 2/2/3/3;
+    padding-right: 2%;
+}
+
 footer {
-    position: fixed;
-    bottom: 0%;
-    left: 0px;
     height: 20%;
     width: 100%;
     text-align: center;
@@ -83,26 +97,52 @@ img {
     max-height: 100%;
 }
 
-
 h1 {
     position: relative;
     left: 0%;
 }
 
+@font-face {
+    font-family: retroFont;
+    src: url(../resources/Haike-Regular.ttf);
+  }
 
 button{
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    font-family: retroFont;
+    font-size: 120%;
+    font-weight: bold;
     margin: 1%;
     background: transparent;
-    border-radius: 100%;
-    width: 100px;
-    height:100px;
+    width: 65%;
+    height: 80%;
     position: relative;
     left: 30%;
+    color: cyan;
+    border-radius: 5%;
+    background-color: #302244;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, rgb(189,0,255) 30%, rgb(0,30,255),rgb(0,184,255) , rgb(0,255,159) 70%);
+    border-image-slice: 1;
+  
 }
+
+
+@font-face{
+    font-family: retroFontCursive;
+    src: url(../resources/Haike-RegItalic.ttf)
+}
+
 button:hover {
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.17s;
+    transition-duration: 0.17s;
+    font-family: retroFontCursive;
+    font-size: 140%;
     cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
+    width: 90%;
+    background-color: rgb(0,184,255);
+    font-size-adjust: inherit;
+    color: rgb(189,0,255);
+    border-radius: 0%;
 }
