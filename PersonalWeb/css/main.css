@@ -1,9 +1,8 @@
-body{
+body {
     margin: 0;
     padding: 0;
     height: 100vh;
     overflow: hidden;
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
 }
 
 .todo {
@@ -16,19 +15,20 @@ body{
     background-size: 100% 100%;
     width: 100%;
     height: 100%;
+    z-index: -2;
 }
 
-#title{
+#title {
     text-align: center;
     grid-area: 1 / 1 / 1 / 3;
-    background-image: linear-gradient(to left, purple,purple,violet, cyan, pink, cyan, red, cyan);
+    background-image: linear-gradient(to left, purple, purple, violet, cyan, pink, cyan, red, cyan);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    font-size: 80%;      
-  z-index:2;
+    -webkit-text-fill-color: transparent;
+    font-size: 80%;
+    z-index: 2;
 }
 
-#title > h1{
+#title>h1 {
     position: relative;
     bottom: 25%;
 }
@@ -38,18 +38,18 @@ body{
     text-align: center;
     grid-area: 2 / 1 / 3 / 2;
     display: grid;
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 .innerContainer {
     grid-area: 2 / 2 / 3 / 3;
-    display: grid;  
+    display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;  
-    background:transparent;
+    grid-template-rows: 1fr 1fr;
+    background: transparent;
 }
 
-.box{
+.box {
     text-align: center;
     background: transparent;
 }
@@ -60,24 +60,23 @@ body{
     grid-area: 1/1/3/2;
 }
 
-.imageBox > img{
+.imageBox>img {
     max-width: 60%;
     max-height: 60%;
     border-radius: 10%;
     position: relative;
-    top:15%;
+    top: 15%;
 }
 
-.descriptionBox{
+.descriptionBox {
     grid-area: 1/2/2/2;
     padding-top: 50%;
     padding-right: 2%;
-    
     font-size: 100%;
     font-style: italic;
 }
 
-.contactBox{
+.contactBox {
     grid-area: 2/2/3/3;
     padding-right: 2%;
 }
@@ -105,31 +104,23 @@ h1 {
 @font-face {
     font-family: retroFont;
     src: url(../resources/Haike-Regular.ttf);
-  }
-
-button{
-    -webkit-transition-duration: 0.15s;
-    transition-duration: 0.15s;
-    font-family: retroFont;
-    font-size: 120%;
-    font-weight: bold;
-    margin: 1%;
-    background: transparent;
-    width: 65%;
-    height: 80%;
-    position: relative;
-    left: 30%;
-    color: cyan;
-    border-radius: 5%;
-    background-color: #302244;
-    border: 5px solid transparent;
-    border-image: linear-gradient(to bottom right, rgb(189,0,255) 30%, rgb(0,30,255),rgb(0,184,255) , rgb(0,255,159) 70%);
-    border-image-slice: 1;
-  
 }
 
+button {
+    font-family: retroFont;
+    font-size: 100%;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    color: cyan;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    border-radius: 5%;
+    background-color: #302244;
+    border: none;
+}
 
-@font-face{
+@font-face {
     font-family: retroFontCursive;
     src: url(../resources/Haike-RegItalic.ttf)
 }
@@ -141,8 +132,47 @@ button:hover {
     font-size: 140%;
     cursor: pointer;
     width: 90%;
-    background-color: rgb(0,184,255);
+    background-color: rgb(0, 184, 255);
     font-size-adjust: inherit;
-    color: rgb(189,0,255);
+    color: rgb(189, 0, 255);
     border-radius: 0%;
+}
+
+
+.gradient-border {
+    --borderWidth: 3px;
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+    width: 50%;
+    height: 50%;
+    position: relative;
+    left: 25%;
+    z-index: 0;
+}
+
+.gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, rgb(189, 0, 255), rgb(214, 0, 255) 50%, rgb(13, 2, 33), rgb(0, 184, 255), rgb(0, 255, 159));
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
