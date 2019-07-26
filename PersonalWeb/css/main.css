@@ -68,9 +68,11 @@ body {
 .imageBox>img {
     max-width: 60%;
     max-height: 60%;
-    border-radius: 10%;
+    border-radius: 1%;
     position: relative;
     top: 15%;
+    object-fit: cover;
+    object-position: 100% 0;
 }
 
 .descriptionBox {

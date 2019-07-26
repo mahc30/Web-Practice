@@ -1,42 +1,72 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>Yan Ken Po</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="YanKenPo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<header>
-    <h1> Yan Ken Po </h1>
-</header>
 
 <body>
-
-    <div class="options">
-        <div id="rock" class="option">
-            <img src=https://png.pngtree.com/element_pic/16/12/27/6d1fa638444f37c2eb13d4e2ffef7c6a.jpg> </div> <div
-                id="paper" class="option">
-            <img
-                src="https://www.seekpng.com/png/small/126-1266336_black-icon-left-right-outline-hand-drawing-open.png">
+    <div class="bg-primary">
+        <h1>Rock Paper Scissors</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row game">
+            <div class="col user-score bg-danger">
+                UserScore
+            </div>
+            <div class="col user-choice bg-primary">
+                UserChoice
+            </div>
+            <div class="col machine-choice bg-info">
+                MachineChoice
+                <div class="machine-choice-image rounded-circle" style="width: 100%; height: 60vh; overflow: hidden;">
+                    <img src="./resources/scissors-symbol.png"
+                        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                        alt="">
+                </div>
+            </div>
+            <div class="col machine-score bg-warning">
+                MachineScore
+            </div>
         </div>
-        <div id="scissor" class="option">
-            <img
-                src="https://cdn2.iconfinder.com/data/icons/hand-gestures-2-1/128/Scissor-Hand-Finger-Gesture-Gesture-Scissors-512.png">
+
+        <div class="row">
+            <div class="col you-mark bg-secondary">
+                You
+            </div>
+            <div class="col themachine-mark bg-dark">
+                The Machine
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col bg-primary">
+                Rock
+            </div>
+
+            <div class="col bg-secondary">
+                Paper
+            </div>
+
+            <div class="col bg-success">
+                Scissor
+            </div>
         </div>
     </div>
-    <h2 id="message">¡Abspielen!</h2>
-    <div class="points">
-        <h1>Ergebnis</h1>
-        <div class="scoresDiv"><p2 id="userScore">0</p2>:<p2 id="machineScore">0</p2></div>
-        <div class="user">user</div>
-        <div class="machine">machine</div>
-
-    </div>
-    <p2>Genießen c: </p2>
-    <button class="homeButton" type="button" id="homeButton">Home</button>
-    <button type="button" id="restart">Restart</button>
-
-
 </body>
-<script type="text/javascript" src="Yan Ken Po.js"></script>
 
 </html>
