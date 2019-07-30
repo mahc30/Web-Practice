@@ -1,130 +1,89 @@
-*{
+body{
     margin: 0;
     padding: 0;
+    height: 100vh;
+    background-image: url(../resources/background_1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+ 
+@font-face{
+    font-family: lazer84;
+    src: url(../resources/Lazer84.ttf);
 }
 
-header{
-    text-align: center;
-    height: 10%;
-    background: white;
-    
+.title{
+    padding-top: 2vh;
+}
+.retro-text-1{ 
+    font-family: lazer84;
+    background-image: url(../resources/loop_2.gif);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-body{
-    background: bisque;
-    text-align: center;
-    
+.retro-text-2{ 
+    font-family: lazer84;
+    background-image: url(../resources/loop_3.gif);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-
-.options {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin: 0%;
-    width: 60%;
-    position: relative;
-    left: 20%;
-    height: 35%;
+.retro-text-3{ 
+    font-family: lazer84;
+    background-image: url(../resources/loop_4.gif);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-p {
-    font-size: 2em;
-    padding: 10px;
+.retro-text-4{ 
+    font-family: lazer84;
+    background-image: url(../resources/loop_5.gif);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-h2{
-    font-size: 3em;
+.game{
+    height: 50vh;
+    max-height: 50vh;
 }
 
-h1 {
-    padding: 15px;
+#score_tab{
+    height: 15vh;
+    padding-left: 20vh;
+    padding-right: 20vh;
 }
 
-.option {
-    border: 2px solid black;
-    border-radius: 100%;
-    
-    display: inline-block;
-    height: 95%;
-    width: 30%;
+.options{
+    height: 25vh;
+    max-height: 25vh;
     overflow: hidden;
 }
 
-
-img {
-    max-height: 100%;
-    max-width: 100%;
+.choice-image{
 }
 
-img:hover{
-    background:#494533;
+.user-choice, .machine-choice{
+
 }
 
-.option:hover {
-    cursor: pointer;
-    background:#494533;
+.user-score, .machine-score{
+   /* text-align: center;
+    line-height: 50vh;
+    */
 }
 
-.points {
-    
-    color: white;
-    background:#494545;
-    border: 5px solid black;
-    width: 20%;
-    position: relative;
-    left: 40%;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    padding-bottom: 10px;
+.user-mark, .machine-mark{
+    /*text-align: center;
+    line-height: 15vh;
+    */
 }
 
-
-.scoresDiv{
-    position: relative;
-    right: 3%;
-    font-size: 200%;
-}
-
-.user{
-    display: inline-block;
-    height: 4%;
-    width: 20%;
-    z-index: 1;
-    background: red;
-    position: relative;
-    right: 42%;
-    bottom: 5%;
-    font-size: 15px;
-}
-
-.machine{
-    display: inline-block;
-    height: 4%;
-    width: 20%;
-    z-index: 1;
-    background: red;
-    position: relative;
-    left: 42%;
-    bottom: 5%;
-    font-size: 15px;
-    align-content: center;
-}
-.homeButton {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    font-size: 40px;
-}
-
-button{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    font-size: 40px;
-    color: blue;
-    font-style: bold;
-}
-
-p2{
-    font-size: 40px;
+img{
+    max-width: 200px;
+    max-height: 170px;
 }
