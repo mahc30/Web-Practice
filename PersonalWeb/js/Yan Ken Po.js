@@ -1,113 +1,60 @@
+$(document).ready(function () {
+    const rock = document.getElementById("pick-rock");
+    const paper = document.getElementById("pick-paper");
+    const scissor = document.getElementById("pick-scissors");
+    const user_score_p = document.getElementById("user-score");
+    const machine_score_p = document.getElementById("machine-score");
+    const user_choice_image = document.getElementById("user-choice-image");
+    const machine_choice_image = document.getElementById("machine-choice-image");
 
-const rock = document.getElementById("rock");
-const paper = document.getElementById("paper");
-const scissor = document.getElementById("scissor");
-var userScore = document.getElementById("userScore");
-var machineScore = document.getElementById("machineScore");
-var uPoints = 0;
-var mPoints = 0;
-const restart = document.getElementById("restart");
-const message = document.getElementById("message");
-const homeButton = document.getElementById("homeButton");
+    var user_score = 0;
+    var machine_score = 0;
 
-homeButton.addEventListener('click',function(){
-    location.href = "index.html";
-})
+    $('#pick-rock').click(function (e) {
+        e.preventDefault();
+        console.log("Rock");
+        $("#user-choice-image").attr("src", "./resources/stone-symbol.png");
+        play();
+        addScore(true);
+    });
 
-restart.addEventListener('click',function(){
-    uPoints = 0;
-    mPoints = 0;
-    ChangeScoreBoard(0,0);
-})
+    $('#pick-paper').click(function (e) {
+        e.preventDefault();
+        console.log("Paper");
+        $("#user-choice-image").attr("src", "./resources/paper-symbol.png");
+        play();
+        addScore(false);
+    });
 
-rock.addEventListener('click', function () {
-    console.log("Rock");
-    Play('r', MachineChoice());
-})
+    $('#pick-scissors').click(function (e) {
+        e.preventDefault();
+        console.log("Scissors");
+        play();
+        $("#user-choice-image").attr("src", "./resources/scissors-symbol.png");
+
+    });
+
+    function play() {
+        //Compara el input del usuario con la elección de la máquina, si gana devuelve verdadero si pierde devuelve falso   
+        
+        
 
 
-paper.addEventListener('click', function () {
-    console.log("Paper");
-    Play('p', MachineChoice());
-})
 
 
-scissor.addEventListener('click', function () {
-    console.log("Scissor");
-    Play('s', MachineChoice());
-})
-
-function Play(userChoice, machineChoice) {
-
-    message.innerHTML = "You played: " + Rename(userChoice) + " and the machine played: " + Rename(machineChoice);
-
-    console.log("Machine Choice: " + machineChoice + " User Choice: " + userChoice);
-    if (userChoice === machineChoice) {
-        //Draw
-        console.log("Draw");
-        message.innerHTML += " .Draw";
-    }
-    else if (userChoice === 'r' && machineChoice === 'p') {
-        //Lose
-        console.log("Lose");
-        mPoints += 1;
-        ChangeScoreBoard(uPoints,mPoints);
-        message.innerHTML += " .Lose";
-    }
-    else if (userChoice === 'p' && machineChoice === 's') {
-        //Lose
-        console.log("Lose");
-        mPoints += 1;
-        ChangeScoreBoard(uPoints,mPoints);
-        message.innerHTML += " .Lose";
-    }
-    else if (userChoice === 's' && machineChoice === 'r') {
-        //Lose
-        console.log("Lose");
-        mPoints += 1;
-        ChangeScoreBoard(uPoints,mPoints);
-        message.innerHTML += " .Lose";
-    }
-    else {
-        //Win
-        console.log("win");
-        uPoints +=1;
-        ChangeScoreBoard(uPoints,mPoints);
-        message.innerHTML += " .Win";
+        //Cambia el score del ganador
+        user_score_p.innerText = user_score;
+        machine_score_p.innerText = machine_score;
     }
 
+    function addScore(ganador) {
+        if (ganador) {
+            user_score += 1;
+        } else {
+            machine_score += 1;
+        }
+    }
+});
 
-}
 
-function MachineChoice() {
-    var val = Math.random();
-    console.log(val);
-    if (val < 0.33) {
-        return 'r';
-    }
-    else if (val < 0.66) {
-        return 'p';
-    }
-    else {
-        return 's';
-    }
-}
 
-function ChangeScoreBoard(u,m) {
-        userScore.innerHTML = u;
-        machineScore.innerHTML = m;
-    
-}
-
-function Rename(result){
-
-    if(result === 'p'){
-        return "Paper";
-    }
-    else if(result === 'r'){
-        return "Rock";
-    }
-    else{
-        return "Scissors";
-    }
-}
