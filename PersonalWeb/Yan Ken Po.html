@@ -26,35 +26,34 @@
     <div class="container-fluid">
         <div class="row game">
             <div class="col user-score retro-text-4 align-self-center">
-                <p id="user-score" class="text-center h3">User-Score</p>
+                <p id="user-score-p" class="text-center h5">User-Score</p>
             </div>
             <div class="col user-choice align-self-center">
-                <img id="user-choice-image" src="./resources/placeholder.png" class="img-fluid mx-auto my-auto d-block rounded-circle" alt="">
+                <img id="user-choice-image" src="./resources/placeholder.png"
+                    class="img-fluid mx-auto my-auto d-block rounded-circle" alt="">
             </div>
             <div class="col machine-choice align-self-center">
-                <div class="choice-image">
-                    <img id="machine    -choice-image" src="./resources/placeholder.png" class="img-fluid mx-auto my-auto d-block rounded-circle"
-                        alt="">
-                </div>
+                <img id="machine-choice-image" src="./resources/placeholder.png"
+                    class="img-fluid mx-auto my-auto d-block rounded-circle" alt="">
             </div>
             <div class="col machine-score retro-text-3 align-self-center">
-                <p id="machine-score" class="text-center h3">Machine-Score</p>
+                <p id="machine-score-p" class="text-center h5">Machine-Score</p>
             </div>
         </div>
 
         <div id="score_tab" class="row">
             <div class="col align-self-center user-mark retro-text-3">
-                <p class="text-right h1">You</p>
+                <p id="you-p" class="text-right h4">You</p>
             </div>
             <div class="col align-self-center machine-mark retro-text-1">
-                <p class="text-center h3">VS</p>
+                <p class="text-center h5">VS</p>
             </div>
             <div class="col align-self-center machine-mark retro-text-3">
-                <p class="text-left h1">You'nt</p>
+                <p id="machine-p" class="text-left h4">You'nt</p>
             </div>
         </div>
 
-        <div class=" row options">
+        <div class="bg-3 border border-dark row options">
             <div class="col align-self-center">
                 <div id="pick-rock" class="img-container rounded-circle mx-auto">
                     <img src="./resources/stone-symbol.png" class="img-fluid mx-auto d-block rounded-circle option"
@@ -76,9 +75,13 @@
                 </div>
             </div>
         </div>
-
     </div>
 
+    <div class="home_button_div">
+        <div class="gradient-border">
+            <button id="home-button" class="home_button" type="button">Home</button>
+        </div>
+    </div>
     <script src="./js/Yan Ken Po.js"></script>
 </body>
 

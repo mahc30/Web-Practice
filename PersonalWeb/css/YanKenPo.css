@@ -98,3 +98,57 @@ img{
 .img-container:hover{
     cursor: pointer;
 }
+
+.bg-3{
+    background-image: url(../resources/background_2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.home_button_div {
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    height: 10%;
+    width: 10%;
+}
+
+.home_button {
+    font-weight: bold;
+    font-size: 100%;
+    width: 100%;
+}
+
+.gradient-border {
+    --borderWidth: 3px;
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+}
+
+.gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, rgb(189, 0, 255), rgb(214, 0, 255) 50%, rgb(13, 2, 33), rgb(0, 184, 255), rgb(0, 255, 159));
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
