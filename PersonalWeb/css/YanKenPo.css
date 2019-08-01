@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -6,17 +6,17 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
- 
-@font-face{
+
+@font-face {
     font-family: lazer84;
     src: url(../resources/Lazer84.ttf);
 }
 
-.title{
+.title {
     padding-top: 2vh;
 }
 
-.retro-text-1{ 
+.retro-text-1 {
     font-family: lazer84;
     background-image: url(../resources/loop_2.gif);
     background-size: 100% 10000%;
@@ -24,7 +24,7 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
-.retro-text-2{ 
+.retro-text-2 {
     font-family: lazer84;
     background-image: url(../resources/loop_3.gif);
     background-size: 100% 100%;
@@ -32,7 +32,7 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
-.retro-text-3{ 
+.retro-text-3 {
     font-family: lazer84;
     background-image: url(../resources/loop_4.gif);
     background-size: 100% 100%;
@@ -40,7 +40,7 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
-.retro-text-4{ 
+.retro-text-4 {
     font-family: lazer84;
     background-image: url(../resources/loop_5.gif);
     background-size: 100% 30%;
@@ -48,63 +48,59 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
-.game{
+.game {
     height: 50vh;
     max-height: 50vh;
 }
 
-#score_tab{
+#score_tab {
     height: 15vh;
     padding-left: 20vh;
     padding-right: 20vh;
 }
 
-.options{
+.options {
     height: 25vh;
     max-height: 25vh;
     overflow: hidden;
 }
 
-.choice-image{
-}
+.choice-image {}
 
-.user-choice, .machine-choice{
+.user-choice, .machine-choice {}
 
-}
-
-.user-score, .machine-score{
-   /* text-align: center;
+.user-score, .machine-score {
+    /* text-align: center;
     line-height: 50vh;
     */
 }
 
-.user-mark, .machine-mark{
+.user-mark, .machine-mark {
     /*text-align: center;
     line-height: 15vh;
     */
-
 }
 
-img{
+img {
     max-width: 200px;
     max-height: 170px;
     background-color: transparent;
 }
 
-.img-container{
+.img-container {
     max-width: 200px;
     max-height: 170px;
 }
-.img-container:hover{
+
+.img-container:hover {
     cursor: pointer;
 }
 
-.bg-3{
+.bg-3 {
     background-image: url(../resources/background_2.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
 
 .home_button_div {
     position: fixed;

@@ -1,9 +1,8 @@
 document.getElementById("YanKenPo").onclick = function () {
-    location.href = "Yan Ken Po.html";
-};
+window.location = "./Yan Ken Po.html"};
 
-document.getElementById("LogoQuizGameIdk").onclick = function () {
-    location.href = "LogoQuizGameIdk.html";
+document.getElementById("SnakeGame").onclick = function () {
+    window.location = "./SnakeGame.html";
 };
 
 document.getElementById("Frankenstein").onclick = function () {

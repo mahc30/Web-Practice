@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(../resources/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.title{
+    height: 10vh;
+}
+
+.game{
+    height: 70vh;
+}
+
+.snake{
+    height: 70vh;
+}
+.utils{
+    height: 20vh;
+}

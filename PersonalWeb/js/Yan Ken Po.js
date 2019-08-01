@@ -51,23 +51,21 @@ $(document).ready(function () {
 
     function machinePick() {
         let pick = (Math.floor(Math.random() * 3));
-        console.log(pick);
+        //console.log(pick);
         return pick;
     }
 
     function determineWinner(a, b) {
         //Compara el input del usuario con la elección de la máquina, si gana devuelve verdadero si pierde devuelve falso 
-        console.log(pick_names(a) + '' + pick_names(b));
-
         if (a == b) {
             return 0;
         }
         else if ((a - b + 3) % 3 === 1) {
-            console.log("user wins");
+           // console.log("user wins");
             return 1;
         }
         else {
-            console.log("machine wins");
+           // console.log("machine wins");
             return 2;
         }
         //Cambia el score del ganador
@@ -107,7 +105,6 @@ $(document).ready(function () {
     }
 
     function changeImage(sauce) {
-        console.log("src" + sauce)
         switch (sauce) {
             case 0:
                 $("#machine-choice-image").attr("src", "./resources/stone-symbol.png");
