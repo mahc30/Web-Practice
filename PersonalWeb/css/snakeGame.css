@@ -23,8 +23,48 @@ body {
     height: 15vh;
 }
 
+.home-button:hover{
+    cursor: pointer;
+}
 #snake-sketch {
     width: 100%;
     height: 100%;
     z-index: 100000;
+}
+
+@font-face {
+    font-family: lazer84;
+    src: url(../resources/Lazer84.ttf);
+}
+
+.retro-text-1 {
+    font-family: lazer84;
+    background-image: url(../resources/loop_2.gif);
+    background-size: 100% 10000%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.retro-text-2 {
+    font-family: lazer84;
+    background-image: url(../resources/loop_3.gif);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.retro-text-3 {
+    font-family: lazer84;
+    background-image: url(../resources/loop_4.gif);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.retro-text-4 {
+    font-family: lazer84;
+    background-image: url(../resources/loop_5.gif);
+    background-size: 100% 30%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
