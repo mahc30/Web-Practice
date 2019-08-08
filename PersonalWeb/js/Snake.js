@@ -7,10 +7,7 @@ class Snake {
         this.x_vel = 1;
         this.y_vel = 0;
         this.size = 1;
-        this.tail = [this.size];
-        this.r = 120;
-        this.b = 177;
-        this.g = 0;
+        this.tail = [this.size]
     }
 
 
@@ -21,7 +18,7 @@ class Snake {
 
     show() {
         for (var i = 0; i < this.tail.length; i++) {
-            this.obj.fill(this.r, this.g, this.b);
+            this.obj.fill(222, 16, 194);
             this.obj.rect(this.tail[i].x, this.tail[i].y, this.scl, this.scl);
             this.obj.line(this.tail[i].x + (this.scl / 2), this.tail[i].y, this.tail[i].x + (this.scl / 2), this.tail[i].y + (this.scl));
             this.obj.line(this.tail[i].x, this.tail[i].y + (this.scl / 2), this.tail[i].x + (this.scl), this.tail[i].y + (this.scl / 2));
@@ -37,10 +34,7 @@ class Snake {
                 this.tail[i] = this.tail[i + 1];
             }
         }
-        angle += 0.1;
-        this.r =  this.obj.map(this.obj.mouseX, 0, 1000, 0, 255, true);
-        this.b =  this.obj.map(this.obj.mouseY, 0, 1000, 0, 255, true);
-        this.g =  this.obj.map(this.obj.sin(angle) , -1, 1, 0, 255, true);
+        
         this.tail[this.size - 1] = this.obj.createVector(this.x, this.y);
         this.x += this.x_vel * this.scl;
         this.y += this.y_vel * this.scl;
